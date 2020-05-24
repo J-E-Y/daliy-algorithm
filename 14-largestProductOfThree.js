@@ -9,7 +9,7 @@
  */
 
 var largestProductOfThree = function (array) {
-  // TODO: everything
+  //! 1.TODO: everything
 
   // [2, 5, 3, 7] = 105
   // 2 * 5 * 3 * 7  ====> 5 * 3 * 7
@@ -23,20 +23,23 @@ var largestProductOfThree = function (array) {
   // for 문을 이용해 array[i] === "-";
   // splice(minusArr.indexOf(array[i+1],1))
   // "-", "-", "3", "4", "5", "6"
-
-  var x = ["-", "-", "3", "12", "422", "1"].map(Number).filter((ele) => {
-    return ele > 0;
+  //
+  //! 1.TODO: everything
+  const sorted = array.sort((a, b) => {
+    return b - a;
   });
-  //[3,12,422,1];
-  function sortfunc(a, b) {
-    if (a > b) {
-      return 1;
-    } else if (a === b) {
-      return 0;
+  // variable called "result" with value 1
+  let result = 1;
+  // if(sorted is not empty)
+  // iterate over "sorted", multiply first three element with "result" accumulative
+  for (let i = 0; i < 3; i++) {
+    if (sorted[i] < 0) {
+      // if(sorted[i] is a NEGATIVE number)
+      result = result * Math.abs(sorted[i]);
     } else {
-      return -1;
+      // if(sorted[i] is a POSITIVE number)
+      result = result * sorted[i];
     }
   }
-  x.sort(sortfunc);
-  let ret = x[0] * x[1] * x[2];
+  return result;
 };
