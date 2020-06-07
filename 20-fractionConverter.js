@@ -13,7 +13,7 @@
  */
 
 // fractionConverter
-var toFraction = function(number) {
+var toFraction = function (number) {
   // 숫자를 우선 나눈다.
   var numbers = String(number).split("");
   // .을 찾는다.
