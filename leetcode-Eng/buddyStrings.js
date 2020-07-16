@@ -48,5 +48,5 @@ var buddyStrings = function (A, B) {
       arr.push(B[i]);
     }
   }
-  return;
+  return arr.length === 4 && arr[0] === arr[3] && arr[1] === arr[2];
 };
