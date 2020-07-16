@@ -36,7 +36,7 @@ var buddyStrings = function (A, B) {
     return false;
   }
   if (A === B) {
-    let C = [...new Set(A.split(''))]; // 简单的数组去重操作，有兴趣的小伙伴可以深入了解一下Set
+    let C = [...new Set(A.split(''))];
     return C.length !== A.length;
   }
   A = A.split('');
